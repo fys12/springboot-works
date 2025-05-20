@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootworks.mapper.TbSignalMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.springbootworks.domain.TbSignal">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="carId" column="car_id" jdbcType="INTEGER"/>
+            <result property="mx" column="mx" jdbcType="DECIMAL"/>
+            <result property="mi" column="mi" jdbcType="DECIMAL"/>
+            <result property="ix" column="ix" jdbcType="DECIMAL"/>
+            <result property="ii" column="ii" jdbcType="DECIMAL"/>
+            <result property="signalTime" column="signal_time" jdbcType="TIMESTAMP"/>
+            <result property="processed" column="processed" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,car_id,mx,
+        mi,ix,ii,
+        signal_time,processed
+    </sql>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootworks.mapper.TbWarnInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.springbootworks.domain.TbWarnInfo">
+            <id property="warnId" column="warn_id" jdbcType="BIGINT"/>
+            <result property="carId" column="car_id" jdbcType="INTEGER"/>
+            <result property="ruleId" column="rule_id" jdbcType="INTEGER"/>
+            <result property="warnLevel" column="warn_level" jdbcType="TINYINT"/>
+            <result property="signalData" column="signal_data" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        warn_id,car_id,rule_id,
+        warn_level,signal_data,create_time
+    </sql>
+</mapper>
